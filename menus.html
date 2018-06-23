@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Menu</title>
+<link rel="stylesheet" href="css/style.css">
+<!--<link rel="stylesheet" href="css/menu.css">-->
+<link rel="stylesheet" href="css/login.css">
+<link rel="stylesheet" href="css/common.css">
+	<script type="text/javascript" src="js/custom.js"></script>
+	<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+	<script src="js/jquery-1.11.1.min.js"></script>
+<!--<script src="js/simpleCart.min.js"></script>-->
+<style>
+	.footer iframe{
+		height:390px;
+		width: 100%;
+	}
+   body{
+	  background:#fff;
+	 }
+   .menu-section{
+	    width:1318px;
+			height:936px;
+      padding:56px 0 56px 0;
+			margin-left: auto;
+      margin-right: auto;
+	 }
+	 .menu-section>.container{
+	      width:1140px;
+			  height:936px;
+				padding: 0 15px 0 15px;
+				margin: 0 74px 0 74px;		
+	 }
+	 .menu-section>.container h3{
+	      font-size:43px;
+				height:48px;
+				color:#08538C;
+				font-weight:600;
+			  display:block;
+				font-family:'OleoScript-Bold';
+				text-transform:capitalize;
+				text-align:center;
+	 }
+	 .menu-grids{
+	     width:1140px;
+			 height:848px;
+			 margin-top:42px;
+	  }
+  .menu-grid1{
+	     width:350px;
+			 height:410px; 
+	     padding: 0 15px 0 15px;
+			 position:relative;
+			 float:left;
+			 margin-bottom:5px;
+	}
+	.img-responsive{
+	    width:350px;
+			height:350px; 
+	}
+	.cur{
+	    height:39px;
+			margin-top:21px;
+	}
+	.cur-left{
+	   width:35px;
+		height:39px; 
+    float: left;
+}
+	
+	.item_price span {
+    font-size: 0.8em;
+		list-style: none;
+		}
+ 
+span.glyphicon.glyphicon-shopping-cart {
+    font-size: 2.5em;
+    color: rgb(253, 159, 62);
+}
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+}
+span.item_price h6{
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+}
+</style>
+</head>
+<body>
+
+<div class="header" style="border: 0px solid transparent;height:130px;width:100%">
+			  <!--<iframe src="header.html" frameborder="0"></iframe>-->
+		</div>
+		
+		<!--start-banner-->
+			<div class="banner ban1">
+				<div class="container">
+					<div class="top-menu">
+					   <span class="menu"><img src="image/menu/nav.png" alt=""/> </span>
+								<ul>
+									<li><a  href="index.html">home</a></li>
+									<li><a  href="about.html">about</a></li>
+									<li><a  href="menu.html" class="active">menus</a></li>
+									<li><a  href="gallery.html">gallery</a></li>
+									<li><a  href="events.html">events</a></li>
+									<li><a  href="contact.html">contact</a></li>
+								</ul>
+						<!-- script for menu -->				
+							 <script>
+							 $("span.menu").click(function(){
+							 $(".top-menu ul").slideToggle("slow" , function(){
+							 });
+							 });
+							 </script>
+						<!-- //script for menu -->
+					</div>
+				</div>	
+			</div>
+		<!--end-banner-->
+			<div class="banner-bottom">
+				<div class="container">
+				<div class="droop-down">
+					<div class="droop">
+							<div class="sort-by">
+		            <label>City</label>
+		            <select>
+		                 <option value="">Columbia</option>
+		                 <option value="">Gobaret</option>
+		                 <option value="">Florissant</option>
+										 <option value="">Fergeeson</option>
+		            </select>
+		        </div>
+					</div>
+					<div class="droop">
+							<div class="sort-by">
+		            <label>Name</label>
+		            <select>
+								   <option value="">Cocoon Hotel</option>
+									 <option value="">Chinese Room</option>
+		               <option value="">Royal OrchidCe</option>
+						       <option value="">RoyalOrchidCentral</option>
+						       <option value="">Royal Orchid Central</option>
+		            </select>
+		        </div>
+					</div><div class="droop">
+							<div class="sort-by">
+		            <label>Order</label>
+		            <select>
+		                 <option value="">Arugula</option>
+		                 <option value="">Baking Soda</option>
+		                 <option value="">Cilantro</option>
+							       <option value="">Chicken</option>
+							        <option value="">Squash</option>
+		            </select>
+		        </div>
+					</div>
+					<div class="search">
+					<form>
+					<input type="submit" value="search">
+					</form>				
+					</div>
+					<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		<div class="content">
+			<div class="menu-section">
+					<div class="container">
+						<h3> featured menu</h3>
+						<div class="menu-grids wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible;">
+						<div class="menu1">
+					  	<div class="menu-grid1 simpleCart_shelfItem">
+								   <img src="image/menu/m1.jpg" class="img-responsive" alt="" />
+								<div class="cur">
+									<div class="cur-left">
+										<div class="item_add">
+										  <span class="item_price">
+											 <a href="#">
+											     <img src="image/menu/cart.jpg" alt="">
+										      <span class="glyphicoglyphicon-shopping-cart" aria-hidden="true"></span>
+											 </a>
+											</span>
+										</div>
+									</div>
+									<div class="cur-right">
+										<div class="item_add">
+										  <span class="item_price">
+											   <h6><span>only</span>$95.00</h6>
+											</span>
+										</div>
+									</div>
+										<div class="clearfix"> </div>
+								</div>
+								</div>
+							<div class="menu-grid1 simpleCart_shelfItem">
+								<img src="image/menu/m2.jpg" class="img-responsive" alt="" />
+								<div class="cur">
+									<div class="cur-left">
+										<div class="item_add">
+										  <span class="item_price">
+										     <a href="#">
+										   	   <img src="image/menu/cart.jpg" alt="">
+												   <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+												 </a>
+									  	</span>
+										</div>
+									</div>
+									<div class="cur-right">
+										<div class="item_add">
+										  <span class="item_price">
+										     <h6><span>only</span> $75.00</h6>
+										  </span>
+										</div>
+									</div>
+										
+								</div>
+								</div>
+							<div class="menu-grid1 simpleCart_shelfItem">
+								<img src="image/menu/m3.jpg" class="img-responsive" alt="" />
+								<div class="cur">
+									<div class="cur-left">
+										<div class="item_add">
+										  <span class="item_price">
+									     	<a href="#">
+										     	<img src="image/menu/cart.jpg" alt="">
+												   <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+												</a>
+										  </span>
+										</div>
+									</div>
+									<div class="cur-right">
+										<div class="item_add">
+										   <span class="item_price">
+											   <h6><span>only</span>$65.00</h6>
+											</span>
+										</div>
+									</div>
+										<div class="clearfix"> </div>
+								</div>
+								</div>
+								<div class="clearfix"></div>
+								</div>
+								<div class="menu2">
+							<div class="menu-grid1 simpleCart_shelfItem">
+								<img src="image/menu/m5.jpg" class="img-responsive" alt="" />
+								<div class="cur">
+									<div class="cur-left">
+										<div class="item_add">
+										  <span class="item_price">
+										    <a href="#">
+										  	  <img src="image/menu/cart.jpg" alt="">
+												  <span class="glyphicon glyphicon-shopping-cart"aria-hidden="true"></span>
+												</a>
+										  </span>
+										</div>
+									</div>
+									<div class="cur-right">
+										<div class="item_add">
+									  	<span class="item_price">
+										     <h6><span>only</span> $55.00</h6>
+										  </span>
+										</div>
+									</div>			
+							  </div>
+							  </div>
+							<div class="menu-grid1 simpleCart_shelfItem">
+								<img src="image/menu/m6.jpg" class="img-responsive" alt="" />
+								<div class="cur">
+									<div class="cur-left">
+										<div class="item_add">
+									  	<span class="item_price">
+										    <a href="#">
+										  	  <img src="image/menu/cart.jpg" alt="">
+												   <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+												</a>
+									  	</span>
+										</div>
+									</div>
+									<div class="cur-right">
+										<div class="item_add">
+										  <span class="item_price">
+										    <h6><span>only</span> $65.00</h6>
+										 </span>
+										</div>
+									</div>					
+								</div>
+								</div>
+							<div class="menu-grid1 simpleCart_shelfItem">
+								<img src="image/menu/m7.jpg" class="img-responsive" alt="" />
+								<div class="cur">
+									<div class="cur-left">
+										<div class="item_add">
+										  <span class="item_price">
+										     <a href="#">		    
+												   <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"><img src="image/menu/cart.jpg" alt=""></span>
+												 </a>
+										  </span>
+										</div>
+									</div>
+									<div class="cur-right">
+										<div class="item_add">
+										  <span class="item_price">
+										     <h6><span>only</span> $85.00</h6>
+										  </span>
+										</div>
+									</div>		
+								</div>
+						   </div>	
+						</div>							
+					</div>
+			</div>
+		</div>
+		</div>
+	<div class="footer">
+	 <iframe src="footer.html" frameborder="0"></iframe>
+	 </div>
+
+	<div class="footer-section">
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script>
+            $.ajax({
+                url: "header.html",
+                cache: false,
+                success: function(html){
+                    $(".header").html(html);
+                }
+            });
+		</script>
+
+            <script type="text/javascript">
+                jQuery(document).ready(function($) {
+                    $(".scroll").click(function(event){
+                        event.preventDefault();
+                        $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+                    });
+                });
+						$(document).ready(function() {					
+							$().UItoTop({ easingType: 'easeOutQuart' });				
+						});
+					</script>
+				   <a href="#" id="toTop" style="display: block;">
+					   <span id="toTopHover" style="opacity: 1;"></span>
+					 </a>
+  </div>
+
+</body>
+</html>
+	

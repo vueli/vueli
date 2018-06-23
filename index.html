@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HOME首页</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script  src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+	<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+<!-- 头部 -->
+<div class="header" style="border: 0px solid transparent;height:130px;width:100%">
+	<!--<iframe id="myFrame" name="myFrame" src="header.html" frameborder="0"></iframe>-->
+</div>
+<!--top banner -->
+<div class="banner">
+	<div class="container">
+		<div class="top-menu">
+		     <span class="menu">
+		       <img src="image/home/nav.png" alt="">
+		     </span>
+			<ul>
+				<li><a href="index.html"class="active">home</a></li>
+				<li><a href="about.html">about</a></li>
+				<li><a href="menus.html">menus</a></li>
+				<li><a href="gallery.html">gallery</a></li>
+				<li><a href="events.html">events</a></li>
+				<li><a href="contact.html">contact</a></li>
+			</ul>
+		</div>
+		<section class="slider">
+			<div class="flexslider">
+				<ul class="slides">
+					<li class="clone" style="width: 940px; float: left; display: block;">
+						<div class="slider-info">
+							<h2>Welcome</h2>
+							<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+						</div>
+					</li>
+					<li style="width: 940px; float: left; display: block;" class="flex-active-slide">
+						<div class="slider-info">
+							<h2>Welcome</h2>
+							<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+						</div>
+					</li>
+					<li style="width: 940px; float: left; display: block;" class="">
+						<div class="slider-info">
+							<h2>Welcome</h2>
+							<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+						</div>
+					</li>
+					<li style="width: 940px; float: left; display: block;" class="">
+						<div class="slider-info">
+							<h2>Welcome</h2>
+							<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<script defer src="js/jquery.flexslider.js"></script>
+		<script type="text/javascript">
+            $(window).load(function(){
+                $('.flexslider').flexslider({
+                    animation: "slide",
+                    start: function(slider){
+                        $('body').removeClass('loading');
+                    }
+                });
+            });
+            $(window).load(function(){
+            $.ajax({
+                url: "header.html",
+                cache: false,
+                success: function(html){
+                    $(".header").html(html);
+                }
+            });
+            });
+            $("#toTop").click(function () {
+                $("html, body").animate({
+                    scrollTop: $(".header").offset().top }, {duration: 500,easing: "swing"});
+                return false;
+            });
+
+		</script>
+	</div>
+<!--下 banner -->
+<div class="banner-bottom">
+	<div class="container">
+		<div class="droop-down">
+			<div class="droop">
+				<div class="sort-by col-md2">
+					<label>Citys </label>
+					<select class="sel">
+						<option value=""> Columbia</option>
+						<option value="">Gobaret</option>
+						<option value="">Florissant</option>
+						<option value="">ergeeson</option>
+					</select>
+				</div>
+			</div>
+			<div class="droop">
+				<div class="sort-by col-md2">
+					<label>Name</label>
+					<select>
+						<option value=""> Cocoon Hotel</option>
+						<option value="">Chinese Room</option>
+						<option value="">RoyalOrchidCe</option>
+						<option value="">RoyalOrchidCentral</option>
+						<option value="">RoyalOrchidCentral</option>
+					</select>
+				</div>
+			</div>
+			<div class="droop">
+				<div class="sort-by col-md2">
+					<label>Order</label>
+					<select>
+						<option value="">Arugula</option>
+						<option value="">Baking Soda</option>
+						<option value="">Cilantr</option>
+						<option value="">Chicken</option>
+						<option value="">Squash</option>
+					</select>
+				</div>
+			</div>
+			<div class="search">
+				<form>
+					<input type="submit" value="search">
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>
+<!-- 主体部分 -->
+</div>
+<!-- 主体 -->
+<div class="content">
+
+	<!--hot-offer  -->
+	<div class="today-offer">
+		<div class="today-head">
+			<h3> today hot offer</h3>
+			<p>Autem vel eum iriure dolor in hendrerit in volestie consequat vel illum</p>
+		</div>
+		<div class="today-grids">
+			<div class="today-grid test1">
+				<img src="image/home/p1.jpg" width="300px"height="453px" class="img-responsive" alt="/">
+				<div class="textbox">
+					<h4>FOOD QUALITY </h4>
+					<p>Arenean nonummy hendrerit mau phaselntes nascetur ridic ulusm dui fusce feu. Cras vitae neque turpis…</p>
+				</div>
+			</div>
+			<div class="today-grid test1">
+				<img src="image/home/p2.jpg"width="300px" height="453px" class="img-responsive" alt="/">
+				<div class="textbox">
+					<h4>FOOD QUALITY </h4>
+					<p>Arenean nonummy hendrerit mau phaselntes nascetur ridic ulusm dui fusce feu. Cras vitae neque turpis…</p>
+				</div>
+			</div>
+			<div class="today-grid test1">
+				<img src="image/home/p3.jpg"width="300px" height="453px" class="img-responsive" alt="/">
+				<div class="textbox">
+					<h4>FOOD QUALITY </h4>
+					<p>Arenean nonummy hendrerit mau phaselntes nascetur ridic ulusm dui fusce feu. Cras vitae neque turpis…</p>
+				</div>
+			</div>
+			<div class="today-grid test1">
+				<img src="image/home/p4.jpg"width="300px" height="453px" class="img-responsive" alt="/">
+				<div class="textbox">
+					<h4>FOOD QUALITY </h4>
+					<p>Arenean nonummy hendrerit mau phaselntes nascetur ridic ulusm dui fusce feu. Cras vitae neque turpis…</p>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<!--end hot-offer  -->
+	<div class="menu-offer">
+		<div class="container">
+			<div class="menu-head">
+				<h3>our menu</h3>
+				<p>Autem vel eum iriure dolor in hendrerit in volestie consequat vel illum</p>
+			</div>
+			<div class="menu-grids">
+				<div class="menu-grid">
+					<div class="menu-text">
+						<div class="menu-text-left">
+							<h5>Cheese, tomato</h5>
+						</div>
+						<div class="menu-text-midle">
+							<span class="line"> </span>
+						</div>
+						<div class="menu-text-right">
+							<h5>$ 50</h5>
+						</div>
+					</div>
+					<div class="menu-text">
+						<div class="menu-text-left">
+							<h5>Chicken, mozzarella</h5>
+						</div>
+						<div class="menu-text-midle">
+							<span class="line"> </span>
+						</div>
+						<div class="menu-text-right">
+							<h5>$62</h5>
+						</div>
+					</div>
+					<div class="menu-text">
+						<div class="menu-text-left">
+							<h5>Tuna, Sweetcorn</h5>
+						</div>
+						<div class="menu-text-midle">
+							<span class="line"> </span>
+						</div>
+						<div class="menu-text-right">
+							<h5>$25</h5>
+						</div>
+					</div>
+					<div class="menu-text">
+						<div class="menu-text-left">
+							<h5>Minced,Beef</h5>
+						</div>
+						<div class="menu-text-midle">
+							<span class="line"> </span>
+						</div>
+						<div class="menu-text-right">
+							<h5>$30</h5>
+						</div>
+					</div>
+				</div>
+				<div class="menu-grid">
+					<div class="menu-text">
+						<div class="menu-text-left">
+							<h5>tomato, mushr</h5>
+						</div>
+						<div class="menu-text-midle">
+							<span class="line"> </span>
+						</div>
+						<div class="menu-text-right">
+							<h5>$ 50</h5>
+						</div>
+					</div>
+					<div class="menu-text">
+						<div class="menu-text-left">
+							<h5>Chicken, onions</h5>
+						</div>
+						<div class="menu-text-midle">
+							<span class="line"> </span>
+						</div>
+						<div class="menu-text-right">
+							<h5>$62</h5>
+						</div>
+					</div>
+					<div class="menu-text">
+						<div class="menu-text-left">
+							<h5>Tuna, Sweetcorn</h5>
+						</div>
+						<div class="menu-text-midle">
+							<span class="line"> </span>
+						</div>
+						<div class="menu-text-right">
+							<h5>$25</h5>
+						</div>
+					</div>
+					<div class="menu-text">
+						<div class="menu-text-left">
+							<h5>Pineapple, Beef</h5>
+						</div>
+						<div class="menu-text-midle">
+							<span class="line"> </span>
+						</div>
+						<div class="menu-text-right">
+							<h5>$30</h5>
+						</div>
+					</div>
+				</div>
+				<div class="menu-grid cooke">
+					<img src="image/home/p5.jpg" class="img-responsive" alt="/">
+				</div>
+			</div>
+		</div>
+
+</div>
+	<!-- 底部 -->
+	  <div class="order-grids">
+		<div class="container">
+			<div class="order-head">
+				<h3>What makes us Different</h3>
+				<p>Autem vel eum iriure dolor in hendrerit in volestie consequat vel illum</p>
+			</div>
+			<section class="nav" id="section">
+				<div style="height:283px; display:none">
+					<input id="label-1" name="lida" type="radio" checked/>
+					<label for="label-1" id="item1"><i class="icon-globe" id="i1"></i>Label One</label>
+					<div class="contents" id="a1">
+						<h4>DESSERTS</h4>
+						<img src="image/home/p1.jpg" class="img-responsive" alt="/">
+						<img src="image/home/p2.jpg" class="img-responsive" alt="/">
+						<img src="image/home/p3.jpg" class="img-responsive" alt="/">
+						<img src="image/home/p4.jpg" class="img-responsive" alt="/">
+					</div>
+				</div>
+				<div style="height:283px; display:none">
+					<input id="label-2" name="lida" type="radio"/>
+					<label for="label-2" id="item2"><i class="icon-leaf" id="i2"></i>Label Two</label>
+					<div class="contents" id="a2">
+						<h4>CHICKEN</h4>
+						<img src="image/home/p9.jpg" class="img-responsive" alt="/">
+						<img src="image/home/p6.jpg" class="img-responsive" alt="/">
+						<img src="image/home/p7.jpg" class="img-responsive" alt="/">
+						<img src="image/home/p8.jpg" class="img-responsive" alt="/">
+					</div>
+				</div>
+				<div style="height:283px; display:none">
+					<input id="label-3" name="lida" type="radio"/>
+					<label for="label-3" id="item3"><i class="icon-trophy" id="i3"></i>Label Three</label>
+					<div class="contents" id="a3">
+						<h4>SEAFOOD</h4>
+						<img src="image/home/s1.jpg" class="img-responsive" alt="/">
+						<img src="image/home/s2.jpg" class="img-responsive" alt="/">
+						<img src="image/home/s3.jpg" class="img-responsive" alt="/">
+						<img src="image/home/s4.jpg" class="img-responsive" alt="/">
+					</div>
+				</div>
+				<div style="height:283px; display:none">
+					<input id="label-4" name="lida" type="radio"/>
+					<label for="label-4" id="item4"><i class="icon-gift" id="i4"></i>Label four</label>
+					<div class="contents" id="a4">
+						<h4>DESSERTS</h4>
+						<img src="image/home/s5.jpg" class="img-responsive" alt="/">
+						<img src="image/home/s6.jpg" class="img-responsive" alt="/">
+						<img src="image/home/s7.jpg" class="img-responsive" alt="/">
+						<img src="image/home/s8.jpg" class="img-responsive" alt="/">
+					</div>
+				</div>
+				<div style="height:283px;display:none">
+					<input id="label-5" name="lida" type="radio"/>
+					<label for="label-5" id="item5"><i class="icon-coffee" id="i5"></i>Label Five</label>
+					<div class="contents" id="a5">
+						<h4>SALADS</h4>
+						<img src="image/home/d1.jpg" class="img-responsive" alt="/">
+						<img src="image/home/d2.jpg" class="img-responsive" alt="/">
+						<img src="image/home/d3.jpg" class="img-responsive" alt="/">
+						<img src="image/home/d4.jpg" class="img-responsive" alt="/">
+					</div>
+				</div>
+			</section>
+		</div>
+	  </div>
+</div>
+	<div class="footer">
+		<iframe src="footer.html" frameborder="0"></iframe>
+	</div>
+
+	<!--bottom-->
+</body>
+</html>

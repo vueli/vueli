@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Cart</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/login.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/cart.css">
+ <script src="js/jquery-1.11.1.min.js"></script>
+</head>
+<style>
+  .cart-items{
+	  margin:0;
+		padding:75px 0;
+	}
+  .cart-items>.container{
+		  height:875px;
+		}
+  .cart-items>.container h1{
+        font-size:24px;
+		font-weight:500;
+		line-height:1.1;
+		margin-bottom:30px;
+}
+ .cart h2{
+	font-size:24px;
+	margin-bottom:15px;
+}
+.cart-sec{
+	
+	margin-bottom:45px;
+}
+.cart-item{
+	width:20%;
+	float:left;
+	margin-right:5%;	
+}
+.cart-item img{
+   width:70%;
+}
+.cart-item-info{
+	width:75%;
+	float:left;	 
+}
+.check{
+	padding:75px 0;
+}
+.cart-item-info h3{
+	font-size:15px;
+	font-weight:600;
+}
+.cart-item-info h3 a{
+	color:#000;
+}
+.cart-item-info h3 span{
+	display:block;
+	font-weight:400;
+	font-size: 13px;
+  margin: 10px 0;
+}
+.size_3 {
+  width:100%;
+}
+.delivery {
+  margin-top: 45px;
+}
+.delivery p {
+  color: #A6A6A6;
+  font-size: 15px;
+  font-weight: 400;
+  float: left;
+}
+.delivery span {
+  color: #A6A6A6;
+  font-size: 15px;
+  font-weight: 400;
+  float: right;
+}
+.cart-item-info h4 span{
+	font-size:12px;
+	font-weight:400;
+} 
+
+
+.cart-header {  
+  position: relative;  
+}
+.cart-header2 {  
+  position: relative;  
+}
+.cart-header3 {  
+  position: relative;  
+}
+.close1,.close2,.close3{
+  background: url('image/cart/close_1.png') no-repeat 0px 0px;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+a.order {
+  background:#00405d;
+  padding: 10px 20px; 
+  font-size: 15px;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  font-weight: 600;
+  text-align: center;
+  margin:45px 0;
+}
+.clearfix:before{
+   display:table;
+	 content:"";
+}
+</style>
+<body>
+     <div class="header" style="border: 1px solid transparent;height: 130px;width: 100%">
+	      <!--<iframe src="header.html" frameborder="0"></iframe>-->
+	 </div>
+	  	<!--banner-->
+	 <div class="banner ban1">
+				<div class="container">
+					<div class="top-menu">
+					<span class="menu"><img src="images/nav.png" alt=""/> </span>
+						<ul>
+							<li><a  href="index.html">home</a></li>
+							<li><a  href="about.html">about</a></li>
+							<li><a  href="menus.html">menus</a></li>
+							<li><a  href="gallery.html">gallery</a></li>
+							<li><a  href="events.html">events</a></li>
+							<li><a  href="contact.html">contact</a></li>
+						</ul>
+					</div>
+				</div>	
+			</div>
+	 <div class="banner-bottom">
+			<div class="container">
+				<div class="droop-down">
+					<div class="col droop">
+						<div class="sort-by">
+		            <label>City</label>
+		            <select>
+					         <option value="">Columbia</option>
+		               <option value="">Gobaret</option>
+		               <option value="">Florissant</option>
+					         <option value="">Fergeeson</option>	   
+		            </select>
+		        </div>
+					</div>
+					<div class="col droop">
+							<div class="sort-by">
+		            <label>Name</label>
+		            <select>
+		                 <option value="">Cocoon Hotel</option>
+		                 <option value="">Chinese Room</option>
+		                 <option value="">Royal Orchid Central</option>
+						 <option value="">Royal Orchid Central</option>
+						 <option value="">Royal Orchid Central</option>
+		            </select>
+		        </div>
+					</div><div class="col droop">
+							<div class="sort-by">
+		            <label>Order</label>
+		            <select>
+		                 <option value="">Arugula</option>
+		                 <option value="">Baking Soda</option>
+		                 <option value="">Cilantro</option>
+					     <option value="">Chicken</option>
+					     <option value="">Squash</option>
+		            </select>
+		        </div>
+					</div>
+					<div class="col search">
+					<form>
+					<input type="submit" value="search">
+					</form>				
+					</div>
+					<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			
+	 <div class="content">
+       <div class="main-1 cart-items">
+		<div class="container">
+        <h1>My Shopping Bag</h1>
+			<script>
+				$(document).ready(function(c) {
+					$('.close1').on('click', function(c){
+						$('.cart-header').fadeOut('slow', function(c){
+							$('.cart-header').remove();
+						});
+						});	  
+					});
+			</script>
+			 <div class="cart-header">
+				 <div class="close1"></div>
+				 <div class="cart-sec simpleCart_shelfItem">
+						<div class="cart-item cyc">
+							 <img src="image/cart/c1.jpg" class="img-responsive" alt="">
+						</div>
+					   <div class="cart-item-info">
+								<h3><a href="#"> Lorem Ipsum is not simply </a><span>Pickup time:</span></h3>
+								<ul class="qty">
+									<li><p>Min. order value:</p></li>
+									<li><p>FREE delivery</p></li>
+								</ul>
+							 <div class="delivery">
+									 <p>Service Charges : $10.00</p>
+									 <span>Delivered in 1-1:30 hours</span>
+									 <div class="clearfix"></div>
+				       </div>	
+					   </div>
+					   <div class="clearfix"></div>					
+				  </div>
+			 </div>
+			 <script>
+				 $(document).ready(function(c) {
+						$('.close2').on('click', function(c){
+								$('.cart-header2').fadeOut('slow', function(c){
+							$('.cart-header2').remove();
+						});
+						});	  
+						});
+			 </script>
+			 <div class="cart-header2">
+				 <div class="close2" style="top:130px"> </div>
+				  <div class="cart-sec simpleCart_shelfItem">
+						<div class="cart-item cyc">
+							 <img src="image/cart/c2.jpg" class="img-responsive" alt="">
+						</div>
+					   <div class="cart-item-info">
+						<h3><a href="#"> Lorem Ipsum is not simply </a><span>Pickup time:</span></h3>
+						<ul class="qty">
+							<li><p>Min. order value:</p></li>
+							<li><p>FREE delivery</p></li>
+						</ul>
+						 <div class="delivery">
+							 <p>Service Charges : $10.00</p>
+							 <span>Delivered in 1-1:30 hours</span>
+						 </div>
+						 <div class="clearfix"></div>
+			     </div>		 						
+			  </div>
+			</div>
+			  <script>
+							$(document).ready(function(c) {
+								$('.close3').on('click', function(c){
+										$('.cart-header3').fadeOut('slow', function(c){
+									$('.cart-header3').remove();
+								});
+								});	  
+								});
+				</script>				    
+			  <div class="cart-header3">
+				 <div class="close3" style="top:300px"></div>
+				  <div class="cart-sec simpleCart_shelfItem">
+						<div class="cart-item cyc">
+							 <img src="image/cart/c3.jpg" class="img-responsive" alt="">
+						</div>
+					   <div class="cart-item-info">
+						<h3><a href="#"> Lorem Ipsum is not simply </a><span>Pickup time:</span></h3>
+						<ul class="qty">
+							<li><p>Min. order value:</p></li>
+							<li><p>FREE delivery</p></li>
+						</ul>
+							 <div class="delivery">
+							 <p>Service Charges : $10.00</p>
+							 <span>Delivered in 1-1:30 hours</span>
+							 <div class="clearfix"></div>
+				        </div>	
+					   </div>
+					   <div class="clearfix"></div>
+											
+				  </div>
+			  </div>				  		 
+	   </div>
+</div>
+	 </div>
+<!-- footer -->
+      <div class="footer">
+				<iframe src="footer.html" frameborder="0"></iframe>	
+      </div>
+	 <script>
+         $.ajax({
+             url: "header.html",
+             cache: false,
+             success: function(html){
+                 $(".header").html(html);
+             }
+         });
+	 </script>
+	 <script src="js/jquery-1.11.1.min.js"></script>
+</body>
+</html>
+	

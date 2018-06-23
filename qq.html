@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="output"></div>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script>
+    var data = null;
+    const url = 'https://api.github.com/users/AnnatarHe'
+
+    $.ajax({
+        url: url,
+        type: 'get',
+        dataType: 'json',
+        async:false,
+        success:function(innerdata){
+            data = innerdata; //ajax外无法访问_code
+        },
+    });
+
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange =function () {
+        if (xhr.readyState == 4 || xhr.status == 200)
+            return data = xhr.responseText;
+    }
+
+    xhr.open('GET', url, false);
+    xhr.send();
+
+    console.log(data);
+    $('#output').html(data.id);
+</script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/login.css">
+<link rel="stylesheet" href="css/common.css">
+</head>
+<style>
+</style>
+<body>
+	 <div class="header" style="border: 1px solid transparent;height: 130px;width: 100%">
+	      <!--<iframe id="myFrame" name="myFrame" src="header.html" frameborder="0"></iframe>-->
+	 </div>
+	  	<!--banner-->
+			<div class="banner ban1">
+				<div class="container">
+					<div class="top-menu">
+					<!--<span class="menu"><img src="images/nav.png" alt=""/> </span>-->
+						<ul>
+							<li><a  href="index.html">home</a></li>
+							<li><a  href="about.html">about</a></li>
+							<li><a  href="menus.html">menus</a></li>
+							<li><a  href="gallery.html">gallery</a></li>
+							<li><a  href="events.html">events</a></li>
+							<li><a  href="contact.html">contact</a></li>
+						</ul>
+					</div>
+				</div>	
+			</div>
+		<div class="banner-bottom">
+			<div class="container">
+				<div class="droop-down">
+					<div class="col droop">
+						<div class="sort-by">
+		            <label>City</label>
+		            <select>
+					         <option value="">Columbia</option>
+		               <option value="">Gobaret</option>
+		               <option value="">Florissant</option>
+					         <option value="">Fergeeson</option>	   
+		            </select>
+		        </div>
+					</div>
+					<div class="col droop">
+							<div class="sort-by">
+		            <label>Name</label>
+		            <select>
+		                 <option value="">Cocoon Hotel</option>
+		                 <option value="">Chinese Room</option>
+		                 <option value="">Royal Orchid Central</option>
+						         <option value="">Royal Orchid Central</option>
+						         <option value="">Royal Orchid Central</option>
+		            </select>
+		        </div>
+					</div><div class="col droop">
+							<div class="sort-by">
+		            <label>Order</label>
+		            <select>
+		                 <option value="">Arugula</option>
+		                 <option value="">Baking Soda</option>
+		                 <option value="">Cilantro</option>
+					           <option value="">Chicken</option>
+					          <option value="">Squash</option>
+		            </select>
+		        </div>
+					</div>
+					<div class="col search">
+					<form>
+					<input type="submit" value="search">
+					</form>				
+					</div>
+					<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="content">
+ <div class="main-1">
+		<div class="container">
+       <div class="login-page">
+			   <div class="account_grid">
+			   <div class="col-md-6 login-left wow fadeInLeft" data-wow-delay="0.4s">
+			  	 <h3>NEW CUSTOMERS</h3>
+				   <p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
+				   <a class="acount-btn" href="submit.html">Create an Account</a>
+			   </div>
+			   <div class="login-right">
+			  	<h3>REGISTERED CUSTOMERS</h3>
+				  <p>If you have an account with us, please log in.</p>
+				<form id="maniForm" action="" method="post" enctype="multipart/form-data">
+				  <div>
+				   	<span>Email Address<label>*</label></span>
+				  	<input type="text" name="email" id="email">
+				  </div>
+				  <div>
+				   	<span>Password<label>*</label></span>
+				  	<input type="password" name="upwd"id="upwd">
+				  </div>
+			   	  <a class="forgot" href="#">Forgot Your Password?</a>
+			   	  <input type="submit" value="Login">
+			    </form>
+				   <iframe id="rfFrame" name="rfFrame" src="about:blank" style="display:none;"></iframe>
+			   </div>	
+			   <div class="clearfix"></div>
+		  	 </div>
+		   </div>
+		 </div>
+	</div>
+	</div>
+<!-- footer -->
+<div id="footer">
+
+
+		<!--<iframe src="footer.html" frameborder="0"></iframe>	-->
+
+</div>	
+		    <!--<a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 0;"><span id="toTopHover" style="opacity: 1;"></span></a>-->
+            <!--<a href="#" id="toTop">to Top</a>-->
+	 <script src="js/jquery-1.11.1.min.js"></script>
+     <script>
+
+         $("#maniForm").submit(function (envent) {
+             envent.preventDefault();
+             var show = function(){window.text};
+
+             $.ajax({
+                 url: "data/login.php",
+                 data: {email: $("#email").val(), upwd: $("#upwd").val()},
+                 async:false,
+                 success: function (data) {
+                   var msg=data.msg;
+                   var email=data.email;
+                   var text= $("div .login").text(email);
+                     window.text=text;
+                 }
+             });
+             console.log(show());
+             $(function () {
+                 if (!window.sessionStorage.getItem("show"))
+                     var s=window.sessionStorage.setItem("show",$(".header").html());
+
+             });
+             window.onbeforeunload=function (){
+                 window.sessionStorage.myhtml=$(".header").html()
+             }
+             window.onload=function(){
+                 $(".header").html(window.sessionStorage.myhtml);
+         //       handleTaskView();
+
+             }
+
+
+
+//             var xhr = new XMLHttpRequest();
+//             xhr.onreadystatechange =function () {
+//                 if (xhr.readyState == 4 || xhr.status == 200)
+//                     return data = xhr.responseText;
+//             }
+//
+//             xhr.open('post',"data/login.php",false);
+//             xhr.send();
+           //  var result=data.login_text;
+//             var login_text= '<a href="javascript:;"'+'style="position:relative;' +
+//                 'top:22px;right:20px;font-size:20px;font-weight:normal">'+'' +email + '</a>';
+		//	 console.log(result);
+//             $("div.login").after(login_text).remove();
+//           localStorage.setItem('data',data);
+			// location.reload();
+         });
+         window.onload=function(){
+             $(".header").html(window.sessionStorage.myhtml);
+          //   handleTaskView();
+             window.sessionStorage.setItem("show",$(".header").html());
+         }
+         sessionStorage.setAttribute("myhtml",$(".header").html());
+         console.log(Value);
+
+
+
+
+         //    	var getNum = localStorage.getItem('data');
+//  console.log(getNum);
+  //   $("div.login").after(getNum);
+
+         $.ajax({
+             url: "header.html",
+             cache: false,
+             success: function(html){
+                 $(".header").html(html);
+             }
+         })
+	 </script>
+
+</body>
+</html>
+	

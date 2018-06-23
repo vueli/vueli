@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Submit</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/login.css">
+<link rel="stylesheet" href="css/common.css">
+ <script src="js/jquery-1.11.1.min.js"></script>
+</head>
+<style>
+    .main-1>.container{
+	   height:586px;  
+	}
+   .register{
+    height:418px;
+	padding:84px 0;
+}
+.register-top-grid h3, .register-bottom-grid h3 {
+	color:#394c53;
+	font-size: 1.2em;
+	padding-bottom: 15px;
+	margin: 0;
+	font-weight: 600;
+}
+.register-top-grid div, .register-bottom-grid div {
+	width: 48%;
+	float: left;
+	margin: 10px 0;
+}
+.register-top-grid span, .register-bottom-grid span {
+	color:#999;
+	font-size: 0.85em;
+	padding-bottom: 0.2em;
+	display: block;
+	text-transform: uppercase;
+}
+.register-top-grid input[type="text"], .register-bottom-grid input[type="text"] {
+	border: 1px solid #555;
+	outline-color:#FD9F3E;
+	width: 96%;
+	font-size: 1em;
+	padding: 0.5em;
+}
+.checkbox {
+	margin-bottom: 4px;
+	padding-left: 27px;
+	font-size: 1.1em;
+	line-height: 27px;
+	cursor: pointer;
+}
+.checkbox {
+	float: left;
+	position: relative;
+	font-size: 0.85em;
+	color:#555;
+}
+.checkbox:last-child {
+	margin-bottom: 0;
+}
+.news-letter {
+	color: #555;
+	font-weight:600;
+	font-size: 0.85em;
+	margin-bottom: 1em;
+	display: block;
+	text-transform: uppercase;
+	transition: 0.5s all;
+	clear: both;
+}
+.checkbox i {
+	position: absolute;
+	bottom: 5px;
+	left: 0;
+	display: block;
+	width:20px;
+	height:20px;
+	outline: none;
+	border: 2px solid #394c53;
+}
+.checkbox input + i:after {
+	content: '';
+	background: url("../images/tick1.png") no-repeat 1px 2px;
+	top: -1px;
+	left: -1px;
+	width: 15px;
+	height: 15px;
+	font: normal 12px/16px FontAwesome;
+	text-align: center;
+}
+.checkbox input + i:after {
+	position: absolute;
+	opacity: 0;
+	transition: opacity 0.1s;
+	
+}
+.checkbox input {
+	position: absolute;
+	left: -9999px;
+}
+.checkbox input:checked + i:after {
+	opacity: 1;
+}
+.news-letter:hover {
+	color:#00BFF0;
+}
+.register-but{
+	margin-top:1em;
+}
+.register-but form input[type="submit"] {
+	background: #FD9F3E;
+	color: #FFF;
+	font-size: 1.2em;
+	padding: 0.6em 2em;
+	transition: 0.5s all;
+	display: inline-block;
+	text-transform: uppercase;
+	border: none;
+	outline: none;
+}
+.register-but input[type="submit"]:hover {
+	background:#08538c;
+}
+div.register-bottom-grid {
+	margin-top:3em;
+}
+</style>
+<body>
+	 <div class="header">
+	      <iframe src="header.html" frameborder="0"></iframe>
+	 </div>
+	  	<!--banner-->
+			<div class="banner ban1">
+				<div class="container">
+					<div class="top-menu">
+					<span class="menu"><img src="images/nav.png" alt=""/> </span>
+						<ul>
+							<li><a  href="index.html">home</a></li>
+							<li><a  href="about.html">about</a></li>
+							<li><a  href="menus.html">menus</a></li>
+							<li><a  href="gallery.html">gallery</a></li>
+							<li><a  href="events.html">events</a></li>
+							<li><a  href="contact.html">contact</a></li>
+						</ul>
+					</div>
+				</div>	
+			</div>
+		<div class="banner-bottom">
+			<div class="container">
+				<div class="droop-down">
+					<div class="col droop">
+						<div class="sort-by">
+		            <label>City</label>
+		            <select>
+					         <option value="">Columbia</option>
+		               <option value="">Gobaret</option>
+		               <option value="">Florissant</option>
+					         <option value="">Fergeeson</option>	   
+		            </select>
+		        </div>
+					</div>
+					<div class="col droop">
+							<div class="sort-by">
+		            <label>Name</label>
+		            <select>
+		                 <option value="">Cocoon Hotel</option>
+		                 <option value="">Chinese Room</option>
+		                 <option value="">Royal Orchid Central</option>
+						         <option value="">Royal Orchid Central</option>
+						         <option value="">Royal Orchid Central</option>
+		            </select>
+		        </div>
+					</div><div class="col droop">
+							<div class="sort-by">
+		            <label>Order</label>
+		            <select>
+		                 <option value="">Arugula</option>
+		                 <option value="">Baking Soda</option>
+		                 <option value="">Cilantro</option>
+					           <option value="">Chicken</option>
+					          <option value="">Squash</option>
+		            </select>
+		        </div>
+					</div>
+					<div class="col search">
+					<form>
+					<input type="submit" value="search">
+					</form>				
+					</div>
+					<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="content">
+ <div class="main-1">
+		<div class="container">
+           <div class="register">
+		  	  <form action="../data/submit" enctype="multipart/form-data" method="post">
+				 <div class="register-top-grid">
+					<h3>PERSONAL INFORMATION</h3>
+					 <div class="wow fadeInLeft" data-wow-delay="0.4s">
+						<span>First Name<label>*</label></span>
+						<input type="text"> 
+					 </div>
+					 <div class="wow fadeInRight" style="height:60px">
+						<span>Last Name<label>*</label></span>
+						<input type="text"> 
+					 </div>
+					 <div class="wow fadeInRight">
+						 <span>Email Address<label>*</label></span>
+						 <input type="text"> 
+					 </div>
+					 <div class="clearfix"> </div>
+					   <a class="news-letter" href="#">
+						 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Sign Up for Newsletter</label>
+					   </a>
+					 </div>
+				     <div class="register-bottom-grid">
+						    <h3>LOGIN INFORMATION</h3>
+							 <div class="wow fadeInLeft" data-wow-delay="0.4s">
+								<span>Password<label>*</label></span>
+								<input type="text">
+							 </div>
+							 <div class="wow fadeInRight" data-wow-delay="0.4s">
+								<span>Confirm Password<label>*</label></span>
+								<input type="text">
+			  </form>
+			        <div class="clearfix"> </div>
+			<div class="register-but">
+				  <form style="display:block;margin-top:0">
+					   <input type="submit" value="submit">
+					   <div class="clearfix"> </div>
+				  </form>
+			</div>
+		 </div>
+	 </div>
+ </div>
+<!-- footer -->
+ <div class="footer">
+			<iframe src="footer.html" style="width:109%" frameborder="0"></iframe>	
+ </div>
+	<a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 0;"><span id="toTopHover" style="opacity: 1;"></span></a>
+      <a href="#" id="toTop">to Top</a>
+ </body>
+</html>
+	
